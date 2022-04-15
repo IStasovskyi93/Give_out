@@ -1,0 +1,5 @@
+venv/
+*.pyc
+local_settings.py
+.idea/
+.pytest_cache
