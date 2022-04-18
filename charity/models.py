@@ -22,13 +22,13 @@ class Institution(models.Model):
 
 
 class Donation(models.Model):
-    quantity = models.IntegerField()
-    categories = models.ManyToManyField(Category)
-    institution = models.ForeignKey(Institution, on_delete=models.CASCADE)
+    quantity = models.IntegerField(verbose_name="Ilość")
+    categories = models.ManyToManyField(Category, verbose_name="Kategorii")
+    institution = models.ForeignKey(Institution, on_delete=models.CASCADE, verbose_name="Instytucji")
     address = models.CharField(max_length=150)
-    phone_number = models.PositiveSmallIntegerField()
+    phone_number = models.CharField(max_length=12)
     city = models.CharField(max_length=60)
-    zip_code = models.IntegerField()
+    zip_code = models.CharField(max_length=10)
     pick_up_date = models.DateField()
     pick_up_time = models.TimeField()
     pick_up_comment = models.TextField()
