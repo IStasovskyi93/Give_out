@@ -30,10 +30,10 @@
     </header>
     {% endblock header %}
 
-
     {% block content %}{% endblock content %}
 
     <footer>
+    {% block footer %}{% endblock footer %}
       <div id="contact" class="contact">
         <h2>Skontaktuj się z nami</h2>
         <h3>Formularz kontaktowy</h3>
@@ -53,7 +53,6 @@
           <a href="#" class="btn btn--small"><img src="{% static 'images/icon-instagram.svg' %}"/></a>
         </div>
       </div>
-    {% block footer %}{% endblock footer %}
     </footer>
 
     {% block finish %}{% endblock finish %}

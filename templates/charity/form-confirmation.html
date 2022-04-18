@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block header %}
     <header class="header--form-page">
@@ -15,11 +16,11 @@
         </ul>
 
         <ul>
-          <li><a href="index.html" class="btn btn--without-border active">Start</a></li>
-          <li><a href="index.html#steps" class="btn btn--without-border">O co chodzi?</a></li>
-          <li><a href="index.html#about-us" class="btn btn--without-border">O nas</a></li>
-          <li><a href="index.html#help" class="btn btn--without-border">Fundacje i organizacje</a></li>
-          <li><a href="index.html#contact" class="btn btn--without-border">Kontakt</a></li>
+          <li><a href="{% url 'landing' %}">Start</a></li>
+          <li><a href="{% url 'landing' %}#steps">O co chodzi?</a></li>
+          <li><a href="{% url 'landing' %}#about-us">O nas</a></li>
+          <li><a href="{% url 'landing' %}#help">Fundacje i organizacje</a></li>
+          <li><a href="{% url 'landing' %}#contact">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -32,4 +33,4 @@
     </header>
 {% endblock header %}
 
-{% block finish %}<script src="js/app.js"></script>{% endblock finish %}
+{% block finish %}<script src="{% static 'js/app.js' %}"></script>{% endblock finish %}
