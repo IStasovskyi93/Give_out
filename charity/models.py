@@ -13,7 +13,7 @@ class Institution(models.Model):
     name = models.CharField(max_length=100, verbose_name='Instytucja')
     description = models.TextField()
     type = models.CharField(verbose_name='Typ organizacji', choices=(('fundacja', 'Fundacja'),
-                            ('organ. pazarządowa', 'Organizacja pozarządowa'), ('zbiórka lokalna', 'Zbiórka lokalna')),
+                            ('organ. pozarządowa', 'Organizacja pozarządowa'), ('zbiórka lokalna', 'Zbiórka lokalna')),
                             default='Fundacja', max_length=100)
     categories = models.ManyToManyField(Category)
 
